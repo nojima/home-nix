@@ -3,3 +3,7 @@
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+
+if [ -f ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
