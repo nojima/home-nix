@@ -57,6 +57,8 @@
 
     ".config/starship.toml".source = ./dotfiles/.config/starship.toml;
     ".config/bashrc".source = ./dotfiles/.config/bashrc;
+    ".vimrc".source = ./dotfiles/.vimrc;
+    ".vim_backup/.keep".text = "";
     ".gitconfig".source = ./dotfiles/.gitconfig;
     ".gitignore".source = ./dotfiles/.gitignore;
   };
