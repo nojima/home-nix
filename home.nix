@@ -35,6 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    pkgs.eza
     pkgs.starship
     pkgs.ripgrep
     pkgs.fzf
@@ -98,8 +99,8 @@
         grep = "grep --color=auto";
         fgrep = "fgrep --color=auto";
         egrep = "egrep --color=auto";
-        ll = "ls -alF";
-        la = "ls -A";
+        ll = "eza -a -l --git --time-style long-iso";
+        tree = "eza --tree -a -l --git --time-style long-iso";
         gs = "git status --short";
         gsw = "git switch";
       };
