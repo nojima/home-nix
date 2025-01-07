@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# C-w で単語削除を行う際に、スペースだけでなく / も単語の区切りとみなす
+stty werase undef
+bind '"\C-w": unix-filename-rubout'
+
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
