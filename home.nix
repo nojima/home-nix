@@ -39,6 +39,10 @@
     pkgs.ripgrep
     pkgs.fzf
     pkgs.zoxide
+    pkgs.go
+    pkgs.gotools
+    pkgs.gopls
+    pkgs.golangci-lint
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
