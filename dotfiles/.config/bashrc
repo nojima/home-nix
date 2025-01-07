@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
-    . ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-fi
-
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"

@@ -81,6 +81,32 @@
     EDITOR = "vim";
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    # Let Home Manager install and manage itself.
+    home-manager.enable = true;
+
+    bash = {
+      enable = true;
+      shellAliases = {
+        ls = "ls --color=auto";
+        grep = "grep --color=auto";
+        fgrep = "fgrep --color=auto";
+        egrep = "egrep --color=auto";
+        ll = "ls -alF";
+        la = "ls -A";
+        gs = "git status --short";
+      };
+      bashrcExtra = ''
+        if [ -f ~/.config/bashrc ]; then
+          . ~/.config/bashrc
+        fi
+      '';
+    };
+
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
+  };
 }
