@@ -56,7 +56,7 @@
     # '';
 
     ".config/starship.toml".source = ./dotfiles/.config/starship.toml;
-    ".config/bashrc".source = ./dotfiles/.config/bashrc;
+    ".config/bashrc_extra".source = ./dotfiles/.config/bashrc_extra;
     ".vimrc".source = ./dotfiles/.vimrc;
     ".vim_backup/.keep".text = "";
     ".gitconfig".source = ./dotfiles/.gitconfig;
@@ -100,8 +100,8 @@
         gsw = "git switch";
       };
       bashrcExtra = ''
-        if [ -f ~/.config/bashrc ]; then
-          . ~/.config/bashrc
+        if [ -f ~/.config/bashrc_extra ]; then
+          . ~/.config/bashrc_extra
         fi
       '';
     };
