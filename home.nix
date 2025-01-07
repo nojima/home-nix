@@ -97,6 +97,7 @@
         ll = "ls -alF";
         la = "ls -A";
         gs = "git status --short";
+        gsw = "git switch";
       };
       bashrcExtra = ''
         if [ -f ~/.config/bashrc ]; then
