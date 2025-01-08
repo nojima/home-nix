@@ -36,14 +36,14 @@
     # '')
 
     pkgs.eza
-    pkgs.starship
-    pkgs.ripgrep
     pkgs.fzf
-    pkgs.zoxide
     pkgs.go
-    pkgs.gotools
-    pkgs.gopls
     pkgs.golangci-lint
+    pkgs.gopls
+    pkgs.gotools
+    pkgs.ripgrep
+    pkgs.starship
+    pkgs.zoxide
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -60,12 +60,12 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
 
-    ".config/starship.toml".source = ./dotfiles/.config/starship.toml;
     ".config/bashrc_extra".source = ./dotfiles/.config/bashrc_extra;
-    ".vimrc".source = ./dotfiles/.vimrc;
-    ".vim_backup/.keep".text = "";
+    ".config/starship.toml".source = ./dotfiles/.config/starship.toml;
     ".gitconfig".source = ./dotfiles/.gitconfig;
     ".gitignore".source = ./dotfiles/.gitignore;
+    ".vim_backup/.keep".text = "";
+    ".vimrc".source = ./dotfiles/.vimrc;
   };
 
   # Home Manager can also manage your environment variables through
