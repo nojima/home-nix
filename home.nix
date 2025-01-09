@@ -102,6 +102,7 @@
         ll = "eza -a -l --git --group --time-style long-iso";
         tree = "eza --tree -a -l --git --time-style long-iso";
         gs = "git status --short";
+        gco = "git checkout";
         gsw = "git switch";
       };
       bashrcExtra = ''
