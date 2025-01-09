@@ -99,7 +99,7 @@
         grep = "grep --color=auto";
         fgrep = "fgrep --color=auto";
         egrep = "egrep --color=auto";
-        ll = "eza -a -l --git --time-style long-iso";
+        ll = "eza -a -l --git --group --time-style long-iso";
         tree = "eza --tree -a -l --git --time-style long-iso";
         gs = "git status --short";
         gsw = "git switch";
