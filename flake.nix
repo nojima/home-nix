@@ -14,13 +14,20 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in rec {
+      # 仕事用の flake からインポートするために home.nix などをエクスポートしておく
+      exports = {
+        homeModule = import ./home.nix;
+        inherit pkgs;
+        inherit home-manager;
+      };
+
       homeConfigurations."nojima" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./home.nix ];
+        modules = [ exports.homeModule ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
