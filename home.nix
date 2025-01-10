@@ -104,6 +104,9 @@
         gs = "git status --short";
         gco = "git checkout";
         gsw = "git switch";
+        gsi = "git switch -- $(git branch --format '%(refname:short)' | fzf)";
+        gmaster = "git switch master";
+        gmain = "git switch main";
       };
       bashrcExtra = ''
         if [ -f ~/.config/bashrc_extra ]; then
