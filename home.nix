@@ -109,9 +109,7 @@
         gmain = "git switch main";
       };
       bashrcExtra = ''
-        if [ -f ~/.config/bashrc_extra ]; then
-          . ~/.config/bashrc_extra
-        fi
+        . ~/.config/bashrc_extra
       '';
     };
 
