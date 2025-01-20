@@ -41,7 +41,6 @@
     pkgs.golangci-lint
     pkgs.gopls
     pkgs.gotools
-    pkgs.pass
     pkgs.ripgrep
     pkgs.starship
     pkgs.zoxide
