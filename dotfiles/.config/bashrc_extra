@@ -4,6 +4,9 @@
 stty werase undef
 bind '"\C-w": unix-filename-rubout'
 
+# for pinentry
+GPG_TTY=$(tty)
+
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
