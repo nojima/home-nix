@@ -5,6 +5,11 @@
 [user]
 	email = nojima@ynojima.com
 	name = Yusuke Nojima
+	signingKey = E111C079623D60F2
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
 [merge]
 	ff = false
 [pull]
