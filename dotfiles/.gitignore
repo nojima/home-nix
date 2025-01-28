@@ -10,3 +10,5 @@ TAGS
 *.iml
 .idea/
 .vscode/
+
+.direnv/
