@@ -6,7 +6,7 @@ bind '"\C-w": unix-filename-rubout'
 
 # for gpg
 if command -v gpgconf > /dev/null; then
-    GPG_TTY=$(tty)
+    export GPG_TTY=$(tty)
     gpgconf --launch gpg-agent
     gpgconf --launch dirmngr
 fi
