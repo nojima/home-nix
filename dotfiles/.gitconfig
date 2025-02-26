@@ -17,6 +17,8 @@
 [push]
 	default = simple
 [init]
-    defaultBranch = main
+	defaultBranch = main
+[alias]
+	force-push = "push --force-with-lease --force-if-includes"
 [include]
 	path = /home/nojima/.gitconfig.private
