@@ -1,24 +1,55 @@
+# Reference
+# - How Core Git Developers Configure Git
+#   https://blog.gitbutler.com/how-git-core-devs-configure-git/
+
 [core]
-	excludesfile = /home/nojima/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 	pager = LESSCHARSET=utf-8 less -FRX
 [user]
 	email = nojima@ynojima.com
 	name = Yusuke Nojima
 	signingKey = nojima@ynojima.com
-[commit]
-	gpgSign = true
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[branch]
+	sort = -committerdate
 [tag]
+	sort = version:refname
+	gpgSign = true
+[commit]
+	verbose = true
 	gpgSign = true
 [merge]
 	ff = false
+	conflictstyle = zdiff3
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
 [pull]
 	rebase = true
 [push]
 	default = simple
-[init]
-	defaultBranch = main
+	autoSetupRemote = true
+	followTags = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[column]
+	ui = auto
+[help]
+	autocorrect = prompt
 [alias]
 	force-push = "push --force-with-lease --force-if-includes"
 [include]
-	path = /home/nojima/.gitconfig.private
+	path = ~/.gitconfig.private
