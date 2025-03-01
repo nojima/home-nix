@@ -31,7 +31,7 @@
 [rebase]
 	autoSquash = true
 	autoStash = true
-	updateRefs = true
+	#updateRefs = true
 [fetch]
 	prune = true
 	pruneTags = true
