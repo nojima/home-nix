@@ -15,7 +15,7 @@ fi
 if command -v gpgconf > /dev/null; then
     export GPG_TTY=$(tty)
     gpgconf --launch gpg-agent
-    gpgconf --launch dirmngr
+    #gpgconf --launch dirmngr
 fi
 
 eval "$(starship init bash)"
