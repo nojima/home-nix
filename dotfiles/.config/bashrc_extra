@@ -11,6 +11,10 @@ if is_interactive_shell; then
     bind '"\C-w": unix-filename-rubout'
 fi
 
+mkcd() {
+    mkdir "$1" && cd "$_"
+}
+
 # for gpg
 if command -v gpgconf > /dev/null; then
     export GPG_TTY=$(tty)
