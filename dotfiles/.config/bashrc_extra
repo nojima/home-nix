@@ -30,6 +30,10 @@ if [[ -f ~/.cargo/env ]]; then
     . ~/.cargo/env
 fi
 
-if [[ -f /home/nojima/.ghcup/env ]]; then
-    . /home/nojima/.ghcup/env
+if [[ -f ~/.ghcup/env ]]; then
+    . ~/.ghcup/env
+fi
+
+if [[ -d "$HOME/.local/bin" ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
 fi
