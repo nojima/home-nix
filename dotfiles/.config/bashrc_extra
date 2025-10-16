@@ -22,11 +22,6 @@ if command -v gpgconf > /dev/null; then
     #gpgconf --launch dirmngr
 fi
 
-# for ssh-agent
-if [[ -n "$XDG_RUNTIME_DIR" ]]; then
-    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-fi
-
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
@@ -46,3 +41,5 @@ fi
 if [[ -d "$HOME/.local/bin" ]]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
+
+eval $(ssh-agent)

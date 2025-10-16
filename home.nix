@@ -61,7 +61,6 @@
     # '';
 
     ".config/bashrc_extra".source = ./dotfiles/.config/bashrc_extra;
-    ".config/systemd/user/ssh-agent.service".source = ./dotfiles/.config/systemd/user/ssh-agent.service;
     ".config/starship.toml".source = ./dotfiles/.config/starship.toml;
     ".gitconfig".source = ./dotfiles/.gitconfig;
     ".gitignore".source = ./dotfiles/.gitignore;
