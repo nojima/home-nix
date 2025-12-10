@@ -42,4 +42,8 @@ if [[ -d "$HOME/.local/bin" ]]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if command -v aqua > /dev/null; then
+    export PATH="$(aqua root-dir)/bin:$PATH"
+fi
+
 eval $(ssh-agent)
