@@ -36,6 +36,10 @@ set wildmode=list:longest
 set undodir=$HOME/.vim_undo
 set undofile
 
+# Vim Modeline Bypass Vulnerability Let Attackers Execute Arbitrary OS Commands
+# https://cybersecuritynews.com/vim-modeline-bypass-vulnerability/
+set nomodeline
+
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
