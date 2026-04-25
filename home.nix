@@ -37,6 +37,7 @@
 
     pkgs.eza
     pkgs.fzf
+    pkgs.gh
     pkgs.go
     pkgs.golangci-lint
     pkgs.gopls
