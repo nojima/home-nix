@@ -1,5 +1,17 @@
 { config, pkgs, ... }:
 
+# WORKAROUND: gotools: collision with gopls with modernize
+# https://github.com/nixos/nixpkgs/issues/509480
+let
+  gotoolsWithoutModernize = pkgs.symlinkJoin {
+    name = "gotools-without-modernize";
+    paths = [ pkgs.gotools ];
+    postBuild = ''
+      rm -vf "$out/bin/modernize"
+    '';
+  };
+in
+
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -41,7 +53,7 @@
     pkgs.go
     pkgs.golangci-lint
     pkgs.gopls
-    pkgs.gotools
+    gotoolsWithoutModernize
     pkgs.ripgrep
     pkgs.starship
     pkgs.zoxide
