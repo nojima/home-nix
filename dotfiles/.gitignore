@@ -12,3 +12,5 @@ TAGS
 .vscode/
 
 .direnv/
+
+.claude/
