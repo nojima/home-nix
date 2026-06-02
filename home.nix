@@ -47,13 +47,14 @@ in
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    gotoolsWithoutModernize
     pkgs.eza
     pkgs.fzf
     pkgs.gh
     pkgs.go
     pkgs.golangci-lint
     pkgs.gopls
-    gotoolsWithoutModernize
+    pkgs.pnpm
     pkgs.ripgrep
     pkgs.starship
     pkgs.zoxide
