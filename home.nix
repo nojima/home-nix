@@ -54,6 +54,7 @@ in
     pkgs.go
     pkgs.golangci-lint
     pkgs.gopls
+    pkgs.nodejs
     pkgs.pnpm
     pkgs.ripgrep
     pkgs.starship
